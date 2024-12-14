@@ -23,3 +23,25 @@ btnRegister.addEventListener("click", () => {
   btnLogin.classList.remove("btn-active");
   forms.classList.remove("margin-login");
 });
+
+// Alternar visibilidade de senha
+const togglePasswordVisibility = (inputId, iconElement) => {
+  const input = document.getElementById(inputId);
+  const isPassword = input.type === "password";
+
+  // Alterna entre 'text' e 'password'
+  input.type = isPassword ? "text" : "password";
+
+  // Alterna o ícone entre olho aberto e fechado
+  iconElement.src = isPassword 
+    ? "assets/images/eye-off.svg" 
+    : "assets/images/eye-on.svg"; 
+};
+
+// Adicionar eventos aos ícones de olho
+document.querySelectorAll(".input-icon-eye").forEach((icon) => {
+  icon.addEventListener("click", () => {
+    const inputId = icon.previousElementSibling.id; // Localiza o input associado
+    togglePasswordVisibility(inputId, icon);
+  });
+});
