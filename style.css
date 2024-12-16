@@ -18,7 +18,7 @@ body { background: linear-gradient(180deg, #FFF 0%, #FCF5FE 100%); display: flex
 
 .btn-active:hover { background: #AB38C1; }
 
-.btn-inactive { background: #FFF; color: #000000; border: 1px solid #E4E7EC; }
+.btn-inactive { background: #FFF; color: #667085; border: 1px solid #E4E7EC; }
 
 .margin-login { margin: 40px 0px 416px 0px; }
 
@@ -45,6 +45,9 @@ body { background: linear-gradient(180deg, #FFF 0%, #FCF5FE 100%); display: flex
     border: 1px solid #E2E4E9; background: #FFF; padding-left: 40px; transition: all 0.3s ease; }
 
 .form-container input:hover { border-radius: 8px; border: 1px solid #AB38C1; background: #FFF; box-shadow: 0px 0px 0px 2px rgba(171, 56, 193, 0.25); }
+
+.form-container input:focus { border: 1px solid #AB38C1; box-shadow: 0px 0px 0px 2px rgba(171, 56, 193, 0.25); outline: none; background: #FFF; }
+
 
 .form-container, .form-login, .form-register { display: flex; flex-direction: column; gap: 16px; }
 
